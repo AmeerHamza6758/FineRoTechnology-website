@@ -1,0 +1,113 @@
+aside {
+    display: flex;
+    margin-right: 1%;
+    height: 100vh;
+    width: 25%;
+    
+}
+
+aside .top {
+    width: 100%;
+    background: var(--clr-white);
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2vh;
+    text-decoration: none;
+    margin-bottom:  3vh;
+    /* margin-left: 30px; */
+    }
+
+aside .logo {
+    display: flex;
+    gap: 1rem;
+}
+
+aside .logo>h2>span {
+    color: var(--clr-primary)
+}
+
+aside .logo img {
+    /* width: 2rem; */
+    height: 2rem;
+    background-color: red;
+}
+
+aside button.close span {
+    /* display: none; */
+    position: absolute;
+    /* left: 2%;     */
+    top: 2%;
+    width: 5%;
+    font-size: 4em;
+    background-color: var(--clr-white);
+    transition: all 1s ease-in-out;
+    }
+    .close-btn{
+        width: 4vw;
+        
+    }
+
+aside .sidebar {
+    background: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    min-height: 85vh;
+    /* transition: ; */
+}
+
+aside h3 {
+    font-weight: 500;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(--clr-info-dark);
+    margin-left: 2%;
+    gap: 1%;
+    align-items: center;
+    height: 3.3rem;
+    transition: all 0.1s ease;
+}
+
+aside .sidebar a>span {
+    /* font-size: 1.6rem; */
+    transition: all 1s ease-in-out;
+}
+
+aside .sidebar a:last-child {
+    /* position: absolute; */
+    margin-top: 14vh;
+    bottom: 1%;
+    /* width: 100px; */
+}
+
+aside .sidebar a.active {
+    background-color: var(--clr-light);
+    color: var(--clr-primary);
+    margin-left: 0;
+    /* border-left: 5px solid var(--clr-primary); */
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover {
+    color: var(--clr-primary);
+    margin-left: 1rem;
+}
+
+/* For Messages */
+aside .sidebar a>span.msg_count {
+    background-color: var(--clr-danger);
+    color: var(--clr-white);
+    padding: 2px 5px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+aside .sidebar a.active::before {
+    content: '';
+    width: 0.5vw;
+    height: 100%;
+    background-color: var(--clr-primary);
+}

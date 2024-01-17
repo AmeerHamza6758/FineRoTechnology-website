@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+CRUD
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+//import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import'./AddCustomer.css';
 
-## Available Scripts
+const AddCustomer = () => {
+    const [data, setData] = useState([]);
+    //Form Data
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [phone, setPhone] = useState('')
+    const [edit, setEdit] = useState(-1)
+    //Update STate
+    const [uname, setUname] = useState('')
+    const [uemail, setUemail] = useState('')
+    const [uphone, setUphone] = useState('')
 
-In the project directory, you can run:
+    // Get Data from API
+    useEffect(() => {
+        axios.get("http://localhost:3000/customers")
+            .then(res => setData(res.data))
+            .catch(err => console.error(err));
+    }, []);
 
-### `npm start`
+    // Handle Form Submission Post data in DB
+    const handleSubmit = (event) => {
+        const id = data.id + 1
+        event.preventDefault();
+        axios.post("http://localhost:3000/customers", { id: id, name: name, email: email, phone: phone })
+            .then(res => {
+                // location.reload();
+            })
+            .catch(err => console.error(err));
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+        // Add logic to handle form submission (e.g., axios.post())
+    };
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    //EDIT BUTTON
+    const handleEdit = (id) => {
+        axios.get("http://localhost:3000/customers/" + id)
+            .then(res => {
+                setUname(res.data.name)
+                setUemail(res.data.email)
+                setUphone(res.data.phone)
+            })
+    }
 
-### `npm test`
+    //UPDATE BUTTON
+    const handleUpdate = (id) => {
+        axios.put("http://localhost:3000/customers/" + edit, { id: edit, name: uname, email: uemail, phone: uphone })
+            .then(res => {
+                // location.reload();
+                setEdit(-1)
+            })
+            .catch(err => console.log(err))
+    }
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    //DELETE DATA
+    const handleDelete=(id)=>{
+        axios.get("http://localhost:3000/customers/" + id)
+        .then(res => {
+        //    location.reload()
+        })
 
-### `npm run build`
+    }
+    return (
+        <div className='container'>
+            {/* Adding Form */}
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder='Enter your Name' required onChange={e => setName(e.target.value)} />
+                </div>
+                <div className='mb-2'>
+                    <label>E-mail</label>
+                    <input type="email" name="email" placeholder='Enter your Email' required onChange={e => setEmail(e.target.value)} />
+                </div>
+                <div>
+                    <label>Phone</label>
+                    <input type="number" name="phone" placeholder='Enter your Phone' required onChange={e => setPhone(e.target.value)} />
+                </div>
+                <button type="submit">Submit</button>
+            </form>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+            <table className='table'>
+                <thead className='table-head'>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map((customer, index) => (
+                        customer.id === edit ?
+                            <tr>
+                                <td>{customer.id}</td>
+                                <td><input type="text" value={customer.name} onChange={e => setName(e.target.value)} /></td>
+                                <td><input type="text" value={customer.email} onChange={e => setEmail(e.target.value)} /></td>
+                                <td><button onClick={handleUpdate}>Update</button></td>
+                            </tr>
+                            :
+                            <tr key={index}>
+                                <td>{customer.id}</td>
+                                <td>{customer.name}</td>
+                                <td>{customer.email}</td>
+                                <td>{customer.phone}</td>
+                                <td>
+                                    <button onClick={() => handleEdit(customer.id)}>Edit</button>
+                                    <button onClick={() =>handleDelete(customer.id)}>Delete</button>
+                                </td>
+                            </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+export default AddCustomer;

@@ -1,0 +1,36 @@
+.recent_order{
+    margin-top: 2rem;
+}
+.recent_order h2{
+    color: var(--clr-dark);
+}
+.recent_order h2{
+    margin-bottom: 0.8rem;
+}
+.recent_order table{
+    background: var(--clr-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all .3s ease;
+    color: var(--clr-dark);
+  }
+  main .recent_order table:hover{
+    box-shadow: none;
+  }
+  table tbody{
+    height: 35vh;
+    width: auto;
+    border-bottom: 1px solid var(--clr-white);
+    color:var(--clr-dark-variant);
+  }
+ table tbody tr:last-child td{
+    border: none;
+ }
+ .recent_order a{
+    text-align: center;
+    display: block;
+    margin: 1rem;
+  }

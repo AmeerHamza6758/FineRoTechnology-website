@@ -1,0 +1,60 @@
+.form-parent {
+    background-image: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    border-radius: 8px;
+}
+.sign-in-form h1 {
+    /* margin-bottom: 50px;  */
+    font-size: 2rem;
+}
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-bottom: 40px;
+    text-align: center;
+
+}
+.input-fields:focus{
+    outline: none;
+}
+
+.input-fields input {
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid black;
+    margin-bottom: 10px;
+}
+.form-button button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 20rem;
+    background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+    /* color: red; */
+}
+
+/* Errrors class */
+.error{
+    color: red;
+    
+}

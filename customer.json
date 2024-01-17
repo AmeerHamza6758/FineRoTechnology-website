@@ -1,0 +1,62 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Ameer ",
+      "email": "ameer@gmail.com",
+      "phone": "030475533611"
+    },
+    {
+      "id": 2,
+      "name": "Hamzaaa",
+      "email": "hamza@yahoo.com",
+      "phone": "090008989"
+    },
+    {
+      "id": 3,
+      "name": "AMeer hAmxa",
+      "email": "ameer2@GMAIL.com",
+      "phone": "0304949498373"
+    },
+    {
+      "id": 4,
+      "name": "Ameer Hamza",
+      "email": "ameer@gmail.com",
+      "phone": "03047533611"
+    },
+    {
+      "id": 5,
+      "name": "Ali Hamza",
+      "email": "ali@gmail.com",
+      "phone": "03057575757"
+    }
+  ],
+  "admin": [
+    {
+      "email": "ameer@gmail.com",
+      "password": "123456",
+      "rememberMe": true
+    }
+  ],
+  "signup-user": [
+    {
+      "id": "1",
+      "fullName": "Ameer Hamza",
+      "username": "Hamza",
+      "email": "ameer@gmail.com",
+      "phoneNumber": "030475765",
+      "password": "ham@123",
+      "confirm": "password",
+      "gender": "M"
+    }
+  ],
+  "products": [
+    {
+      "productName": "Ro system",
+      "title": "RO",
+      "description": "Here's one that will help you master full-stack development with React:",
+      "price": "360",
+      "image": ""
+    }
+  ]
+}

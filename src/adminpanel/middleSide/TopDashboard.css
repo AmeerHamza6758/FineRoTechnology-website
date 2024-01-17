@@ -1,0 +1,112 @@
+.main-side {
+
+    display: flex;
+    /* gap: 5rem; */
+
+    /* flex-wap: wrap; */
+    /* justify-content: space-evenly; */
+    /* width: 100.3vw; */
+    /* overflow: hidden; */
+}
+
+main input {
+    display: inline-block;
+    background-color: var(--clr-white);
+    margin-top: 1rem;
+    border-radius: var(--border-radius-1);
+    padding: 0.5rem 1.6rem;
+}
+
+/* Time CSS */
+.time_live {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.time_live h1:nth-last-child(1) {
+    margin-left: 15vw;
+    margin-top: 10px;
+    font-size: 2rem;
+    color: var(--clr-dark);
+}
+
+main .cards {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5%; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 1vw;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+
+main .cards>div {
+    background-color: var(--clr-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    /* width: 18rem; */
+    box-shadow: var(--box-shadow);
+    transition: all 0.3 ease;
+}
+
+main .cards>div:hover {
+    box-shadow: none;
+}
+
+main .cards>div span {
+    background-color: chocolate;
+    /* padding: 8px; */
+    border-radius: 50%;
+    color: var(--clr-white);
+    font-size: 2rem;
+}
+
+main .cards>div.expense span {
+    background: var(--clr-info-dark);
+}
+
+main .cards>div.income span {
+    background: var(--clr-success);
+}
+
+/* Middle class */
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+main .cards>div .middle h1 {
+    font-size: 1.6rem;
+}
+
+main h1 {
+    color: var(--clr-dark);
+}
+
+main .cards h1 {
+    color: var(--clr-dark);
+}
+
+main .cards h3 {
+    color: var(--clr-dark);
+}
+
+main .cards p {
+    color: var(--clr-dark);
+}
+
+main .cards h3 {
+    color: var(--clr-dark);
+}
+
+/* End middle class */
+main .cards .progress {
+    display: flex;
+    /* height: ; */
+    width: 30%;
+    /* border-radius: 50px; */
+}

@@ -1,0 +1,133 @@
+ .datatable-products {
+   display: flex;
+   flex-wrap: wrap;
+   width: 84vw;
+   min-height: min-content;
+   flex-direction: column;
+ }
+
+ .datatble-head {
+   /* display: flex; */
+   justify-content: center;
+   align-items: center;
+ }
+
+ .icon-export {
+   margin-top: 10px;
+   color: brown;
+   border-radius: 15px;
+   padding: 13px 15px;
+   background-color: var(--clr-light);
+   /* margin-right: 100px; */
+ }
+
+ .icon-edit {
+   margin-right: 5px;
+   color: blue;
+   border-radius: 15px;
+   padding: 12px 20px;
+   background-color: var(--clr-light);
+ }
+
+ .icon-delete {
+   color: rgb(254, 21, 21);
+   border-radius: 15px;
+   padding: 12px 20px;
+   background-color: var(--clr-light);
+ }
+
+ .btn-search {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 13px 80px;
+   text-align: center;
+   border: 1px solid var(--clr-dark);
+   border-radius: 20px;
+   /* margin-left: 13vw; */
+
+ }
+
+ .heaer-search {
+   /* display: flex; */
+   /* flex-wrap: wrap; */
+   /* width: 95%; */
+   /* justify-content: space-evenly; */
+   /* align-items: center; */
+   /* margin-right: 100px; */
+   /* margin-bottom: 30px; */
+   /* gap: 25em; */
+ }
+
+ /* Products behid */
+ #products .eJJIye {
+   font-size: 22px !important;
+   color: rgba(0, 0, 0, 0.87);
+   background-color: #100e0e;
+   min-height: 56px !important;
+   padding-left: 16px;
+ }
+
+
+
+ /* UploadProducts */
+ .products-header {
+   display: flex;
+   height: 100vh;
+   /* background-color: antiquewhite; */
+   justify-content: center;
+   align-items: center;
+
+ }
+
+ .upload-products {
+   max-width: 700px;
+   width: 100%;
+   padding: 20px 30px;
+   box-shadow: 0 5px 10px black;
+   background-color: white;
+   border-radius: 10px;
+ }
+
+ .content .product-details {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   gap: 20px;
+ }
+
+ .product-details .input-box input {
+   height: 40px;
+   width: 100%;
+   font-size: 16px;
+   padding-left: 10px;
+   border: 1px solid black;
+   /* transition: all 0.3s ease; */
+
+ }
+
+ .input-products input {
+   border: 1px solid black;
+   width: 15%;
+   padding: 10px;
+ }
+
+ .input-buttons {
+   display: flex;
+   justify-content: space-between;
+   width: 90%;
+ }
+
+ .input-buttons button {
+   padding: 10px 30px;
+   color: white;
+   border-radius: 10px;
+ }
+
+ .input-buttons button:nth-child(2) {
+   background-color: green;
+ }
+
+ .input-buttons button:nth-child(1) {
+   background-color: red;
+ }

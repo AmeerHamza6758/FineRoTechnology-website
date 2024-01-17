@@ -1,0 +1,147 @@
+.right {
+  /* margin: 1rem 1.7rem; */
+}
+
+.right h2 {
+  color: var(--clr-dark);
+}
+
+.right .top {
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+   margin: 1rem 2rem;
+}
+
+.right .top button {
+  display: none;
+}
+
+.theme-toggler span {
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+}
+
+.right .theme-toggler {
+  background-color: var(--clr-white);
+  display: flex;
+  justify-content: space-between;
+  height: 3.5vh;
+  width: 5vw;
+  cursor: pointer;
+  border-radius: var(--border-radius-1);
+}
+
+.theme-toggler span {
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggler span.active {
+  background: var(--clr-dark);
+  color: #fff;
+}
+
+.top .profile {
+  display: flex;
+  gap: 30%;
+  text-align: right;
+}
+
+.profile-photo img {
+  width: 2.8rem;
+  height: 2.8rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+/* Recent orders design */
+.recent_updates {
+  margin-top: 1.5rem;
+}
+
+.recent_updates .updates {
+  background-color: var(--clr-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+
+}
+
+.recent_updates .updates:hover {
+  box-shadow: none;
+  background-color: var(--clr-light);
+}
+
+.recent_updates .update {
+  display: flex;
+  /* grid-template-columns: 2.6rem auto; */
+  gap: 1rem;
+  margin: 8%;
+  /* justify-content: space-between; */
+}
+
+/* Sales Analytics */
+.sales-analytics {
+  margin-top: 2rem;
+}
+
+.sales-analytics h2 {
+  margin-bottom: 0.8rem;
+}
+
+.sales-analytics .item {
+  background-color: var(--clr-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.8rem;
+  padding: 1rem;
+  border-radius: var(--border-radius-3);
+  box-shadow: var(--box-shadow);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sales-analytics .item:hover {
+  background-color: var(--clr-light);
+}
+
+.sales-analytics .item .icon {
+  padding: 0.6rem;
+  color: var(--clr-white);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  align-items: center;
+  background: coral;
+}
+
+.sales-analytics .item:nth-child(3) .icon {
+  background: var(--clr-success);
+}
+
+.sales-analytics .item:nth-child(4) .icon {
+  background: var(--clr-danger);
+}
+
+/* Text colors */
+.danger {
+  color: coral;
+}
+
+.success {
+  color: var(--clr-success);
+}
