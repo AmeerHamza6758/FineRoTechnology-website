@@ -31,7 +31,7 @@ function App() {
         element={
           <div className={`AdminPanel ${color ? "" : "dark"}`}>
             <Routes>
-              {/* <Route path='login' element={<Login />} /> */}
+              <Route path='login' element={<Login />} />
               <Route path='topleft' element={<TopLeft />}>
                 <Route
                   index
