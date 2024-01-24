@@ -9,19 +9,21 @@
 }
 
 .products-heading {
-    background: linear-gradient(45deg, #f3ec78, #af4261);
-    color: transparent;
-    -webkit-background-clip: text;
+    /* background: linear-gradient(45deg, #f3ec78, #af4261); */
+    /* color: transparent; */
+    /* -webkit-background-clip: text; */
     text-align: center;
-    margin-bottom: 3rem;
     font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+    color: var(--clr-dark-variant);
 }
 
 .products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* align-items: center; */
     gap: 2rem;
     padding: 2rem;
 

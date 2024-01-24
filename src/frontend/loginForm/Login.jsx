@@ -43,7 +43,7 @@ const Login = () => {
             if (user) {
                 if (user.password === formData.password) {
                     alert('Login Successfully');
-                    navigate('/admin/topleft');
+                    navigate('login');
                 } else {
                     isValid = false;
                     validationErrors.password = 'Wrong password';
@@ -63,7 +63,7 @@ const Login = () => {
     return (
         <div className='form-parent'>
             <div className='sign-in-form'>
-                <h1>Admin Login</h1>
+                <h1>Please Login</h1>
                 <form onSubmit={handleSubmit}>
                     <div className='input-fields'>
                         <input

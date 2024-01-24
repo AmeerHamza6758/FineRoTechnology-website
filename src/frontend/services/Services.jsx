@@ -5,9 +5,7 @@ import videoFile from '../../Assets/video/roVideo.mp4'
 const Services = () => {
     return (
         <div className='services'>
-
-            <span> Left side of services</span>
-
+            {/* <span> Left side of services</span> */}
             <div className='service-right'>
                 <div className='service-video'>
                     <video width='100%' height='100%' loop muted controls>

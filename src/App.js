@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, Outlet } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import TopLeft from './adminpanel/leftSide/TopLeft';
 import AddProducts from './adminpanel/leftSide/pages/addProducts/AddProducts';
@@ -12,7 +12,7 @@ import TopDashboard from './adminpanel/middleSide/TopDashboard';
 import AddCustomer from './adminpanel/leftSide/pages/customerData/AddCustomer';
 import Home from './frontend/Home';
 import ContactForm from './frontend/contactPage/ContactForm';
-import Login from './adminpanel/loginForm/Login';
+import Login from './frontend/loginForm/Login';
 import Signup from './frontend/signUp/Signup';
 import Navbar from './frontend/Navbar';
 import Cards from './frontend/cards/Cards';
@@ -30,14 +30,11 @@ function App() {
         path="/admin/*"
         element={
           <div className={`AdminPanel ${color ? "" : "dark"}`}>
+            <TopLeft />
             <Routes>
-              <Route path='login' element={<Login />} />
-              <Route path='topleft' element={<TopLeft />}>
-                <Route
-                  index
-                  path='topdashboard'
-                  element={<TopDashboard themeToggle={themeToggle} />}
-                />
+              <Route 
+                path='topdashboard'
+                element={<TopDashboard themeToggle={themeToggle} />}>
                 <Route path="addcustomer" element={<AddCustomer />} />
                 <Route path="analytics" element={<Analytics />} />
                 <Route path="messages" element={<Messages />} />
@@ -54,11 +51,11 @@ function App() {
         path="/*"
         element={
           <>
-            {/* <Navbar /> */}
+            
             <Routes>
               <Route path='/' element={<Navbar />}>
                 <Route index element={<Home />} />
-                {/* <Route path="login" element={<Login />} /> */}
+                <Route path="login" element={<Login />} />
                 <Route path="signup" element={<Signup />} />
                 <Route path="contact" element={<ContactForm />} />
                 <Route path="product" element={<Cards />} />

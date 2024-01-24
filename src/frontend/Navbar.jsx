@@ -16,11 +16,11 @@ const Navbar = () => {
             <Link to='/' className='nav-link'>Home</Link>
             <Link to='product' className='nav-link'>Products</Link>
             <Link to='contact' className='nav-link'>Contact Us</Link>
-            <Link to='about' className='nav-link'>About Us</Link>
+            <Link to='footer' className='nav-link'>About Us</Link>
           </div>
           
           <div className='nav-items'>
-            <Link to='@' className='nav-link'>Login</Link>
+            <Link to='login' className='nav-link'>Login</Link>
             <Link to='signup' className='nav-link'>Sign Up</Link>
           </div>
         </div>
@@ -62,9 +62,9 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className='bottom-footer'>
-          <span>Copyright 2023, Ameer hamza</span>
-        </div>
+        <center className='bottom-footer'>
+          <span> Ameer hamza 2023 &#169;</span>
+        </center>
       </footer>
     </>
   );
